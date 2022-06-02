@@ -22,3 +22,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+online-taxi-public/api-passenger/target/classes/com/mashibing/apipassenger/controller/VerificationCodeController.class
+online-taxi-public/api-passenger/target/classes/com/mashibing/apipassenger/request/VerificationCodeDTO.class
+online-taxi-public/api-passenger/target/classes/com/mashibing/apipassenger/service/VerificationCodeService.class
