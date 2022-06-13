@@ -3,6 +3,7 @@ package com.mashibing.apipassenger.service;
 import com.mashibing.apipassenger.remote.ServiceVefificationcodeClient;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.internalcommon.responese.NumberCodeResponse;
+import com.mashibing.internalcommon.responese.TokenResponse;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -34,9 +35,28 @@ public class VerificationCodeService {
         stringRedisTemplate.opsForValue().set(key,numberCode+"",2, TimeUnit.MINUTES);
 
         // 通过短信服务商，将对应的验证码发送到手机上。阿里短信服务，腾讯短信通，华信，容联
-
-
         return ResponseResult.success("");
+
+    }
+
+    /**
+     * 校验手机号和对于的验证码
+     * @param passengerPhone
+     * @param verificationCode
+     * @return
+     */
+    public ResponseResult checkCode(String passengerPhone , String verificationCode){
+        System.out.println("进入 checkCode 方法");
+        // 去redis 读取验证码
+
+        // 校验验证码
+
+        // 判断原来是否有用户
+
+        // 颁发令牌
+        TokenResponse tokenResponse = new TokenResponse();
+        tokenResponse.setToken("token str");
+        return ResponseResult.success(tokenResponse);
 
     }
 }
