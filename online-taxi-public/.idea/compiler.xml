@@ -9,12 +9,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="internal-common" />
         <module name="api-passenger" />
+        <module name="service-passenger-user" />
         <module name="service-verificationcode" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="service-passenger-user" target="8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
