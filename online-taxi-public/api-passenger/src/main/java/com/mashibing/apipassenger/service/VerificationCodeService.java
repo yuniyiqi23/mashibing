@@ -1,8 +1,10 @@
 package com.mashibing.apipassenger.service;
 
+import com.mashibing.apipassenger.remote.ServicePassengerUserClient;
 import com.mashibing.apipassenger.remote.ServiceVefificationcodeClient;
 import com.mashibing.internalcommon.constant.CommonStatusEnum;
 import com.mashibing.internalcommon.dto.ResponseResult;
+import com.mashibing.internalcommon.request.VerificationCodeDTO;
 import com.mashibing.internalcommon.responese.NumberCodeResponse;
 import com.mashibing.internalcommon.responese.TokenResponse;
 import org.apache.commons.lang.StringUtils;
@@ -54,6 +56,9 @@ public class VerificationCodeService {
         return verificationCodePrefix + passengerPhone;
     }
 
+    @Autowired
+    private ServicePassengerUserClient servicePassengerUserClient;
+
     /**
      * 校验验证码
      * @param passengerPhone 手机号
@@ -77,7 +82,9 @@ public class VerificationCodeService {
         }
 
         // 判断原来是否有用户，并进行对应的处理
-        System.out.println("判断原来是否有用户，并进行对应的处理");
+        VerificationCodeDTO verificationCodeDTO = new VerificationCodeDTO();
+        verificationCodeDTO.setPassengerPhone(passengerPhone);
+        servicePassengerUserClient.loginOrRegister(verificationCodeDTO);
 
         // 颁发令牌
         System.out.println("颁发令牌");
