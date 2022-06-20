@@ -93,7 +93,6 @@ public class VerificationCodeService {
         String refreshTokenKey = RedisPrefixUtils.generatorTokenKey(passengerPhone , IdentityConstants.PASSENGER_IDENTITY , TokenConstants.REFRESH_TOKEN_TYPE);
         stringRedisTemplate.opsForValue().set(refreshTokenKey , refreshToken , 31, TimeUnit.DAYS);
 
-
         // 响应
         TokenResponse tokenResponse = new TokenResponse();
         tokenResponse.setAccessToken(accessToken);
