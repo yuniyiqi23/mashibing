@@ -1,6 +1,7 @@
 package com.mashibing.servicepassengeruser.service;
 
 
+import com.mashibing.internalcommon.dto.PassengerUser;
 import com.mashibing.internalcommon.dto.ResponseResult;
 import com.mashibing.servicepassengeruser.mapper.PassengerUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
