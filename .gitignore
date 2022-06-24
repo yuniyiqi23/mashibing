@@ -26,3 +26,4 @@ online-taxi-public/api-passenger/target/classes/com/mashibing/apipassenger/contr
 online-taxi-public/api-passenger/target/classes/com/mashibing/apipassenger/request/VerificationCodeDTO.class
 online-taxi-public/api-passenger/target/classes/com/mashibing/apipassenger/service/VerificationCodeService.class
 online-taxi-public/service-price/target/
+online-taxi-public/internal-common/target/
