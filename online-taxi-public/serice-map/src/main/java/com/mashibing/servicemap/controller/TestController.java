@@ -25,6 +25,8 @@ public class TestController {
         Map<String,Object> map = new HashMap<>();
         map.put("address_code","110000");
         List<DicDistrict> dicDistricts = mapper.selectByMap(map);
+
+
         System.out.println(dicDistricts);
         
         return "test-map";
