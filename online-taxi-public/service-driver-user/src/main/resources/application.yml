@@ -9,3 +9,4 @@ spring:
     password: root
   application:
     name: service-driver-user
+
