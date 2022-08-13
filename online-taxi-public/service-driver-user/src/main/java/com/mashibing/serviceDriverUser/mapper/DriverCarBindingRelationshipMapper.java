@@ -1,6 +1,6 @@
 package com.mashibing.serviceDriverUser.mapper;
 
-import com.mashibing.serviceDriverUser.entity.DriverCarBindingRelationship;
+import com.mashibing.internalcommon.dto.DriverCarBindingRelationship;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 
